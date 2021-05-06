@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06 </title>
+</head>
+<header> <h1>Eventos DOM</h1> </header>
+<body>
+    
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        <strong>Interaja ...</strong>
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        
+        function clicar(){
+            area.innerText = 'Clicou! '
+            area.style.background = 'Orange'
+            area.style.borderColor = 'Red'
+        }
+        function entrar(){
+            area.innerText = 'Entrou!'
+        }
+        function sair(){
+            area.innerText = 'Saiu!'
+            area.style.background = 'rgb(29, 206, 118)'
+            area.style.borderColor = 'rgb(2, 61, 38)'
+
+        }
+    </script>
+    <style>
+        body{
+                background-color: cornflowerblue;
+                text-align: center;
+                align-content: center;
+        }
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darkblue;
+            background-color: rgb(75, 189, 235);
+            text-align: center;
+            border-color: darkblue;
+            border-style: solid;
+            width: 260px;
+            height: 80px;
+            line-height: 80px;
+            display: inline-block;
+        
+        }
+        div#area{
+            background-color: rgb(29, 206, 118);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: rgb(2, 54, 32);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 100px;
+            border-color: rgb(2, 61, 38);
+            border-style: solid;
+            align-content: center;
+            display: inline-block;
+            
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<header>
+    <img src="img/globo2.png" alt="">
+</header>
+<body>
+    <h1>Digite o nome de seu País abaixo: </h1>
+    <p><input type="text" id="paistxt"></p>
+    <p><strong><input type="button" name="avaliar" id="avaliar" value="Avaliar" onclick="nacionalidade()"></strong></p>
+    <div id="pais">
+    
+    </div>
+</body>
+</html>
+
+<style>
+    header{
+        align-content: center;
+        margin-left: 50px;
+    }
+    body{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #avaliar{
+        background-color: rgba(17, 218, 151, 0.918);
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 10px;
+        height: 40px;
+        width: 100px;
+    }
+    #avaliar:hover{
+        background-color: tomato;
+    }
+    #paistxt{
+        height: 20px;
+        width: 250px;
+    }
+</style>
+
+<script>
+    function nacionalidade(){
+        var pais = window.document.querySelector('input#paistxt')
+        var pais2 = window.document.querySelector('div#pais')
+        if(pais = "Brasil"){
+            pais2.innerHTML = `<p>O seu País é ${pais} e você é Brasileiro!</p>`
+        }
+        else{
+            pais2.innerHTML = `<p>O seu País é ${pais} e você é Estrangeiro!</p>`
+        }
+    }
+</script>

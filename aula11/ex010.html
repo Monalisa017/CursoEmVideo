@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<header>
+    <h1>Sistema de Multas</h1>
+    <img src="img/semaforo2.png" alt="">
+</header>
+<body>
+    <h2>Insira seus dados abaixo: </h2>
+    <p id>Velocidade do veículo <input type="number" name="txtVelocidade" id="txtVelocidade"> Km/h</p>
+    <input type="button" value="Verificar" id="button" onclick="calcular()">
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
+
+<style>
+    header{
+        align-items: center;
+    }
+    img{
+        margin-left: 350px;
+    }
+    h1{
+        background-color: crimson;
+        color: orange;
+        text-align: center;
+    }
+    h2{
+        color: orangered;
+        text-align: center;
+    }
+    body{
+        background-color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+    }
+    #txtVelocidade{
+        background-color: black;
+        border: groove;
+        color:white;
+        font-size: 20px;
+    }
+    p{
+        color: orangered;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
+        text-align: center;
+    }
+    #button{
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 800px;
+        background-color: rgb(26, 179, 64);
+        font-size: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #button:hover{
+        background-color: greenyellow;
+    }
+    #resultado{
+        margin-top: 20px;
+        color: white;
+        text-align: center;
+        font-size: 25px;
+    }
+</style>
+
+<script>
+    function calcular(){
+        var txtVelocidade = window.document.querySelector('input#txtVelocidade')
+        var resultado = window.document.querySelector('div#resultado')
+        var velocidade = Number(txtVelocidade.value)
+        resultado.innerHTML = `<p>Sua velocidade atual é <strong>${velocidade}</strong> Km/h</p>`
+        if(velocidade > 60){
+            resultado.innerHTML += `<p> O limite de velocidade nesta área é de 60 Km/h. Você foi <strong>MULTADO</strong> por excesso de velocidade! </p>`
+        }
+        resultado.innerHTML += `<p>Dirija sempre com segurança! </p>`
+    }
+    
+</script>

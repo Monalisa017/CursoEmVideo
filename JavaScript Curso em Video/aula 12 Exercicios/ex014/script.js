@@ -12,10 +12,13 @@ function carregar(){
 
     if(hora >0 && hora < 12){
         imagem.src = 'manha.png'
-    }else if(hora >12 && hora <18){
+        document.body.style.backgroundColor = '#fedb89'
+    }else if(hora >=12 && hora <18){
         imagem.src = 'tarde.png'
+        document.body.style.backgroundColor = 'tomato'
     }else{
         imagem.src = 'noite.png'
+        document.body.style.backgroundColor = '#476080'
     }
     
     }
